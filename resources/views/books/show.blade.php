@@ -100,10 +100,16 @@
 @stop
 
 @section('body')
-
+ <div class="featured-image-container">
+            <a href="{{$book->getUrl()}}" title="{{$book->name}}">
+                <img src="{{$book->getBookCover()}}" alt="{{$book->name}}">
+            </a>
+        </div>
     <div class="container small nopad">
+        
+       
         <h1 class="break-text" v-pre>{{$book->name}}</h1>
-        <div class="book-content" v-show="!searching">
+        <div class="book-content"  v-show="!searching">
             <p class="text-muted" v-pre>{!! nl2br(e($book->description)) !!}</p>
             @if(count($bookChildren) > 0)
             <div class="page-list" v-pre>
