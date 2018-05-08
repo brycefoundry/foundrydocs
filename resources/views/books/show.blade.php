@@ -100,11 +100,7 @@
 @stop
 
 @section('body')
- <div class="featured-image-container">
-            <a href="{{$book->getUrl()}}" title="{{$book->name}}">
-                <img src="{{$book->getBookCover()}}" alt="{{$book->name}}">
-            </a>
-        </div>
+
     <div class="container small nopad">
         
        
